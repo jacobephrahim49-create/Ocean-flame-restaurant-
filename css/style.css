@@ -139,7 +139,10 @@ h2 {
     transition: 0.3s;
     text-align: center;
 }
-
+.menu-item img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 .menu-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
