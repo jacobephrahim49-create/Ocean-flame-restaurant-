@@ -72,22 +72,21 @@ body {
 }
 
 /* HERO */
-.hero {
-    height: 100vh;
-    background: linear-gradient(
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.4)
-    ),
-    url('images/hero.jpg');
-    background-size: cover;
+}.hero {
+    background-image: url("https://images.unsplash.com/photo-1553621042-f6e147245754");
     background-position: center;
     background-repeat: no-repeat;
-    
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
+
+    padding-top: 100px; /* ADD THIS */
 }
 
 .hero-content h1 {
