@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,95 +5,171 @@
     <title>Ocean Flame Restaurant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+        }
+
+        header {
+            background: #ff6600;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .theme-btn {
+            background: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .hero {
+            background: #f4f4f4;
+        }
+
+        .menu-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px auto;
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .menu-item button {
+            background: orange;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .menu-item button:hover {
+            background: darkorange;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Dark Mode */
+        .dark {
+            background: #111;
+            color: white;
+        }
+
+        .dark header {
+            background: #000;
+        }
+
+        .dark .hero {
+            background: #222;
+        }
+
+        .dark .menu-item {
+            border: 1px solid #444;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <header>
-    <nav class="navbar">
-    <h1 class="logo">Ocean Flame</h1>
+<header>
+    <h2>Ocean Flame 🔥</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-btn">🌙</button>
+    </nav>
+</header>
 
-    <ul class="nav-links">
-        ...
-    </ul>
+<section id="home" class="hero">
+    <h1>Fresh Seafood & Grilled Perfection</h1>
+    <p>Experience the taste of the ocean with every bite.</p>
+</section>
 
-    <button id="theme-toggle" class="theme-btn">🌙</button>
-        </nav>
-    </header>
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        Ocean Flame Restaurant offers the finest seafood and grilled dishes 
+        prepared with passion and fresh ingredients.
+    </p>
+</section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Fresh Seafood & Grilled Perfection</h2>
-            <p>Experience the taste of the ocean with every bite.</p>
-            <a href="#menu" class="btn">View Menu</a>
-        </div>
-    </section>
+<section id="menu">
+    <h2>Our Menu</h2>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>
-            Ocean Flame Restaurant offers the finest seafood and grilled dishes 
-            prepared with passion and fresh ingredients. 
-            We bring flavor, comfort, and unforgettable dining experiences.
-        </p>
-    </section>
+    <div class="menu-item">
+        <h3>Grilled Fish</h3>
+        <p>Delicious fresh grilled fish served with lemon.</p>
+        <button onclick="orderNow('Grilled Fish')">Order Now</button>
+    </div>
 
-    <!-- Menu Section -->
-    <section id="menu" class="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-items">
-            <div class="menu-card">
-                <h3>Grilled Salmon</h3>
-                <p>$18</p>
-            </div>
-            <div class="menu-card">
-                <h3>Seafood Platter</h3>
-                <p>$25</p>
-            </div>
-            <div class="menu-card">
-                <h3>Flame Burger</h3>
-                <p>$12</p>
-            </div>
-        </div>
-    </section>
+    <div class="menu-item">
+        <h3>Seafood Pasta</h3>
+        <p>Creamy pasta mixed with premium seafood.</p>
+        <button onclick="orderNow('Seafood Pasta')">Order Now</button>
+    </div>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754" alt="Food 1">
-            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" alt="Food 2">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Food 3">
-        </div>
-    </section>
+    <div class="menu-item">
+        <h3>BBQ Chicken</h3>
+        <p>Juicy grilled chicken with BBQ sauce.</p>
+        <button onclick="orderNow('BBQ Chicken')">Order Now</button>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@oceanflame.com</p>
-        <p>Phone: +123 456 7890</p>
-        <p>Location: Beach Road, Coastal City</p>
-    </section>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Ocean Flame Restaurant. All Rights Reserved.</p>
-    </footer>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@oceanflame.com</p>
+    <p>Phone: +255 700 000 000</p>
+</section>
+
+<footer>
+    <p>© 2026 Ocean Flame Restaurant</p>
+</footer>
+
 <script>
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
+    // Dark Mode Toggle
+    const toggleBtn = document.getElementById("theme-toggle");
 
-    themeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
+    toggleBtn.addEventListener("click", function () {
+        document.body.classList.toggle("dark");
 
-        if (body.classList.contains("dark-mode")) {
-            themeToggle.textContent = "☀";
+        if (document.body.classList.contains("dark")) {
+            toggleBtn.textContent = "☀";
         } else {
-            themeToggle.textContent = "🌙";
+            toggleBtn.textContent = "🌙";
         }
     });
+
+    // Order Popup
+    function orderNow(foodName) {
+        alert("Thank you for ordering " + foodName + " 🍽️\nOur team will contact you soon!");
+    }
 </script>
+
+</body>
+</html>
