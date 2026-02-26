@@ -1,176 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ocean Flame Restaurant</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ocean Flame Restaurant</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            transition: 0.3s;
-        }
+<link rel="stylesheet" href="css/style.css">
 
-        header {
-            background: #ff6600;
-            padding: 15px;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    transition:0.3s;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+header{
+    background:#ff6600;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        .theme-btn {
-            background: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
 
-        section {
-            padding: 40px;
-            text-align: center;
-        }
+.theme-btn{
+    background:white;
+    border:none;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+}
 
-        .hero {
-            background: #f4f4f4;
-        }
+section{
+    padding:60px 20px;
+    text-align:center;
+}
 
-        .menu-item {
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 20px auto;
-            width: 250px;
-            border-radius: 10px;
-        }
+.hero{
+    background:#ddd;
+}
 
-        .menu-item button {
-            background: orange;
-            border: none;
-            padding: 8px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
-        }
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
 
-        .menu-item button:hover {
-            background: darkorange;
-        }
+.menu-item{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    transition:0.3s;
+}
 
-        footer {
-            background: #222;
-            color: white;
-            padding: 20px;
-        }
+.menu-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
 
-        /* Dark Mode */
-        .dark {
-            background: #111;
-            color: white;
-        }
+.menu-item img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
 
-        .dark header {
-            background: #000;
-        }
+.menu-item button{
+    background:orange;
+    border:none;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+    color:white;
+    font-weight:bold;
+}
 
-        .dark .hero {
-            background: #222;
-        }
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-        .dark .menu-item {
-            border: 1px solid #444;
-        }
-    </style>
+/* DARK MODE */
+.dark{
+    background:#111;
+    color:white;
+}
+
+.dark header{
+    background:black;
+}
+
+.dark .menu-item{
+    background:#222;
+}
+
+.dark .hero{
+    background:#333;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h2>Ocean Flame 🔥</h2>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#contact">Contact</a>
-        <button id="theme-toggle" class="theme-btn">🌙</button>
-    </nav>
+<h2>Ocean Flame 🔥</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+<button id="theme-toggle" class="theme-btn">🌙</button>
+</nav>
 </header>
 
 <section id="home" class="hero">
-    <h1>Fresh Seafood & Grilled Perfection</h1>
-    <p>Experience the taste of the ocean with every bite.</p>
+<h1>Fresh Seafood & Grilled Perfection</h1>
+<p>Experience the taste of the ocean with every bite.</p>
 </section>
 
 <section id="about">
-    <h2>About Us</h2>
-    <p>
-        Ocean Flame Restaurant offers the finest seafood and grilled dishes 
-        prepared with passion and fresh ingredients.
-    </p>
+<h2>About Us</h2>
+<p>
+Ocean Flame Restaurant offers the finest seafood and grilled dishes prepared
+with passion and fresh ingredients.
+</p>
 </section>
 
 <section id="menu">
-    <h2>Our Menu</h2>
+<h2>Our Menu</h2>
 
-    <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44" alt="Grilled Fish" width="100%">
-        <h3>Grilled Fish</h3>
-        <p>Delicious fresh grilled fish served with lemon.</p>
-        <button onclick="orderNow('Grilled Fish')">Order Now</button>
-    </div>
+<div class="menu-grid">
 
-    <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1604908176997-431a2f5e0b9d" alt="Seafood Pasta" width="100%">
-        <h3>Seafood Pasta</h3>
-        <p>Creamy pasta mixed with premium seafood.</p>
-        <button onclick="orderNow('Seafood Pasta')">Order Now</button>
-    </div>
+<div class="menu-item">
+<img src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44" alt="Grilled Fish">
+<h3>Grilled Fish</h3>
+<p>Delicious fresh grilled fish served with lemon.</p>
+<button onclick="orderNow('Grilled Fish')">Order Now</button>
+</div>
 
-    <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="BBQ Chicken" width="100%">
-        <h3>BBQ Chicken</h3>
-        <p>Juicy grilled chicken with BBQ sauce.</p>
-        <button onclick="orderNow('BBQ Chicken')">Order Now</button>
-    </div>
+<div class="menu-item">
+<img src="https://images.unsplash.com/photo-1604908176997-431a2f5e0b9d" alt="Seafood Pasta">
+<h3>Seafood Pasta</h3>
+<p>Creamy pasta mixed with premium seafood.</p>
+<button onclick="orderNow('Seafood Pasta')">Order Now</button>
+</div>
 
+<div class="menu-item">
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="BBQ Chicken">
+<h3>BBQ Chicken</h3>
+<p>Juicy grilled chicken with BBQ sauce.</p>
+<button onclick="orderNow('BBQ Chicken')">Order Now</button>
+</div>
+
+</div>
 </section>
+
 <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@oceanflame.com</p>
-    <p>Phone: +255 700 000 000</p>
+<h2>Contact Us</h2>
+<p>Email: info@oceanflame.com</p>
+<p>Phone: +255 700 000 000</p>
 </section>
 
 <footer>
-    <p>© 2026 Ocean Flame Restaurant</p>
+<p>© 2026 Ocean Flame Restaurant</p>
 </footer>
 
 <script>
-    // Dark Mode Toggle
-    const toggleBtn = document.getElementById("theme-toggle");
+const toggleBtn = document.getElementById("theme-toggle");
 
-    toggleBtn.addEventListener("click", function () {
-        document.body.classList.toggle("dark");
+toggleBtn.addEventListener("click", function(){
+document.body.classList.toggle("dark");
 
-        if (document.body.classList.contains("dark")) {
-            toggleBtn.textContent = "☀";
-        } else {
-            toggleBtn.textContent = "🌙";
-        }
-    });
+if(document.body.classList.contains("dark")){
+toggleBtn.textContent="☀";
+}else{
+toggleBtn.textContent="🌙";
+}
+});
 
-    // Order Popup
-    function orderNow(foodName) {
-        alert("Thank you for ordering " + foodName + " 🍽️\nOur team will contact you soon!");
-    }
+function orderNow(food){
+alert("Thank you for ordering " + food + " 🍽️");
+}
 </script>
 
 </body>
