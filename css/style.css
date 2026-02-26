@@ -234,9 +234,13 @@ h2 {
     .hero-content h1 {
         font-size: 32px;
     }
-}
-/* ===== HERO ANIMATION FIXED ===== */
 
+}   /* Hii inafunga media query */
+
+
+
+
+/* ===== HERO ANIMATION FIXED ===== */
 .hero-content h2,
 .hero-content p,
 .hero-content .btn {
